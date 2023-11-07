@@ -1,0 +1,151 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+%add packages here
+
+\title{ST306 LaTex demo}
+\author{Kumudumali Sandaleka}
+\date{November 2023}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+LaTeX is a powerful document preparation system that allows you to create beautifully formatted documents with ease. It is particularly useful for documents with complex structures like research papers, theses, and reports.
+
+\subsection{Document Structure}
+A \LaTeX\, document is structured into different sections, including chapters, sections, subsections, and so on. You can create a table of contents automatically, and \LaTeX\,  will handle the numbering and formatting for you.
+
+% \, single space
+% \quad Tab space
+
+
+\section{Formatting Text}
+
+LaTeX provides various ways to format text. For example, you can make text \textbf{bold}, \textit{italic}, or \underline{underlined}.
+
+You can also control the text size.
+
+{\tiny This text is tiny.} 
+
+{\scriptsize This text is scriptsize.}
+
+{\footnotesize This text is footnotesize.}
+
+{\small This text is small.}
+
+{\normalsize This text is normalsize (default).}
+
+{\large This text is large.}
+
+{\Large This text is Large.}
+
+{\huge This text is HUGE.}
+
+{\Huge This text is HUGER.}
+
+\newpage
+\section{Text Alignment}
+
+\subsection{Left Alignment}
+
+\begin{flushleft} This is a simple example of left-aligned text. This text is aligned to the left margin of the page.
+\end{flushleft}
+
+\subsection{Center Alignment}
+\begin{center}
+This is a simple example of centered text. This text is aligned to the center of the page.
+\end{center}
+
+\subsection{Right Alignment}
+\begin{flushright} This is a simple example of right-aligned text. This text is aligned to the right margin of the page.
+\end{flushright}
+
+
+\section{Lists}
+You can create both ordered and unordered lists:
+
+\subsection{Unordered list}
+ \begin{itemize}
+     \item Unordered item 1
+     \item Unordered item 2
+     \item[*] change the bullet point  
+ \end{itemize}
+ 
+\subsection{Ordered list}
+\begin{enumerate}
+    \item Ordered item 1
+    \item Ordered item 2
+\end{enumerate}
+
+\newpage
+\section{Mathematics}
+
+LaTeX is known for its exceptional support for mathematical notation. You can write mathematical expressions like $E = mc^{2}$ inline, or you can display equations in a separate format:
+
+\[y = \beta_0 + \beta_1 x\]
+$$y = \beta_0 + \beta_1 x$$
+
+\begin{equation}
+    y = \beta_0 + \beta_1 x
+    \label{eq_slr}
+\end{equation}
+
+You can also use the ‘equation’ environment to number your equations:
+
+\begin{equation}
+    \int_0^\infty e^{-x^2} = \frac{\sqrt{\pi}}{2}
+    \label{eq_1}
+\end{equation}
+
+You can refer the equation in text, as Equation \ref{eq_slr}.
+
+%Capital Equation, Table, Figure 
+
+
+\section{Tables}
+\subsection{Basic Table}
+Table 1 shows a simple table.
+
+\begin{table}[h] % <--- h important
+    \centering
+    \begin{tabular}{|c|c|c|} %<----- | verticle lines
+        \hline
+        \textbf{Header 1} & \textbf{Header 2} & \textbf{Header 3} \\
+        \hline
+        Row 1, Cell 1 & Row 1, Cell 2 & Row 1, Cell 3\\
+        \hline
+        Row 2, Cell 1 & Row 2, Cell 2 & Row 2, Cell 3\\
+        Row 3, Cell 1 & Row 3, Cell 2 & Row 3, Cell 3\\
+        \hline
+        
+    \end{tabular}
+    \caption{A Basic Table}
+    \label{tab:basic table}
+\end{table}
+
+\subsection{Custom Column Widths}
+
+If you're looking for random paragraphs, you've come to the right place. When a random word or a random sentence isn't quite enough, the next logical step is to find a random paragraph. We created the Random Paragraph Generator with you in mind. The process is quite simple. Choose the number of random paragraphs you'd like to see and click the button. Your chosen number of paragraphs will instantly appear.
+
+\begin{table}[p]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+         \textbf{Left-aligned} &
+         \textbf{Center-aligned with fixed width} &
+         \textbf{Paragraph column with fixed width}\\
+         \hline
+
+         This is a long text that should wrap within the cell. & Centered text with a fixed width column. & A paragraph column with a fixed width, allowing text to wrap. \\
+         \hline
+    \end{tabular}
+    \caption{Table with Custom Column Widths}
+    \label{tab:alignment table}
+\end{table}
+
+
+Table \ref{tab:alignment table} demonstrates custom column widths.
+\end{document}
